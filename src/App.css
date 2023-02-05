@@ -28,7 +28,7 @@
 }
 
 form {
-  width: 50%;
+  width: 40%;
   margin: 1rem auto;
   text-align: left;
 }
@@ -44,8 +44,17 @@ label {
   font-weight: 700;
 }
 
-.output {
-  height: 200px;
+.output-box {
+  margin: 1rem auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.arm {
+  height: 150px;
   width: 100%;
   background-color: bisque;
   display: flex;
@@ -53,7 +62,57 @@ label {
   align-items: center;
 }
 
+.palm {
+  height: 200px;
+  width: 150px;
+  background-color: bisque;
+  border-radius: 25px;
+}
+
+.fingers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.finger {
+  height: 50px;
+  width: 110px;
+  background-color: bisque;
+  border-radius: 20px;
+}
+
+.finger:first-child::before {
+  display: block;
+  content: "";
+  position: relative;
+  left: -140px;
+  top: -75px;
+  height: 60px;
+  width: 100px;
+  background-color: bisque;
+  border-radius: 20px;
+  transform: rotate(90deg);
+}
+
 .output-text {
   font-size: 4em;
   margin: 0;
+}
+
+/* at media screen size 780px rotate output-box 90deg */
+@media screen and (max-width: 780px) {
+  .output-box {
+    flex-direction: column;
+    gap: 0;
+  }
+  .output-text {
+    font-size: 2em;
+  }
+  .palm,
+  .fingers {
+    display: none;
+  }
 }
