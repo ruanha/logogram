@@ -39,6 +39,21 @@ input {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
 label {
   font-weight: 700;
+}
+
+.output {
+  height: 200px;
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.output-text {
+  font-size: 4em;
+  margin: 0;
 }

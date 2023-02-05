@@ -1,6 +1,7 @@
 import "./App.css";
 import Input from "./components/Input";
 import { useState } from "react";
+import Output from "./components/Output";
 
 function App() {
   const [value, setValue] = useState("");
@@ -17,6 +18,7 @@ function App() {
       </header>
       <main>
         <Input value={value} onChange={setValue} />
+        <Output value="value" />
       </main>
     </div>
   );
