@@ -8,6 +8,12 @@ function App() {
   const [value, setValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
 
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    translate(value).then((result) => setOutputValue(result));
+    setValue("");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,14 +26,7 @@ function App() {
         </div>
       </header>
       <main>
-        <Input value={value} onChange={setValue} />
-        <button
-          onClick={async () => {
-            setOutputValue(await translate(value));
-          }}
-        >
-          MAKE ME A SWEET TATOO!
-        </button>
+        <Input value={value} onChange={setValue} onSubmit={handleSubmit} />
         <Output value={outputValue} />
       </main>
     </div>

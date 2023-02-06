@@ -1,6 +1,6 @@
-export default function Input({ value, onChange }: InputProps) {
+export default function Input({ value, onChange, onSubmit }: InputProps) {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <label htmlFor="first-name">Input your first name:</label>
       <input
         required
@@ -9,6 +9,9 @@ export default function Input({ value, onChange }: InputProps) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
       />
+      <button className="submit-button" type="submit">
+        MAKE ME A SWEET TATOO!
+      </button>
     </form>
   );
 }
@@ -16,4 +19,5 @@ export default function Input({ value, onChange }: InputProps) {
 type InputProps = {
   value: string;
   onChange: (value: string) => void;
+  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
 };
