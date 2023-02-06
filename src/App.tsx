@@ -2,10 +2,11 @@ import "./App.css";
 import Input from "./components/Input";
 import { useState } from "react";
 import Output from "./components/Output";
+import translate from "./services/translate";
 
 function App() {
   const [value, setValue] = useState("");
-  const [outputValue, setOutputValue] = useState("约翰");
+  const [outputValue, setOutputValue] = useState("");
 
   return (
     <div className="App">
@@ -20,6 +21,13 @@ function App() {
       </header>
       <main>
         <Input value={value} onChange={setValue} />
+        <button
+          onClick={async () => {
+            setOutputValue(await translate(value));
+          }}
+        >
+          MAKE ME A SWEET TATOO!
+        </button>
         <Output value={outputValue} />
       </main>
     </div>
