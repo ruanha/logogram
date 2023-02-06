@@ -8,6 +8,7 @@ export default function Output({ value }: { value: string }) {
       <div className="palm"></div>
 
       <div className="fingers">
+        <div className={`finger thumb ${value && "up"}`}></div>
         <div className="finger"></div>
         <div className="finger"></div>
         <div className="finger"></div>

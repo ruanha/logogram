@@ -87,6 +87,7 @@ label {
 }
 
 .fingers {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,17 +103,20 @@ label {
   box-shadow: inset 10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.finger:first-child::before {
-  display: block;
-  content: "";
-  position: relative;
+.thumb {
+  position: absolute;
   left: -40px;
-  top: -40px;
+  top: 0px;
   height: 30px;
   width: 60px;
   background-color: bisque;
   border-radius: 20px;
   transform: rotate(90deg);
+  box-shadow: inset 15px -10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.thumb.up {
+  top: -40px;
 }
 
 .output-text {
