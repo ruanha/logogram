@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Ma Shan Zheng", cursive;
+  src: url("/fonts/MaShanZheng-Regular.ttf");
+}
+
 .App {
   text-align: center;
 }
@@ -120,6 +125,7 @@ label {
 }
 
 .output-text {
+  font-family: "Ma Shan Zheng";
   font-size: 4em;
   margin: 0;
 }
