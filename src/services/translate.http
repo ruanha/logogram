@@ -1,0 +1,5 @@
+POST https://translation.googleapis.com/language/translate/v2
+  ?key={{$REACT_APP_GOOGLE_TRANSLATE_API_KEY}}
+  &q=Hello%20world
+  &source=en
+  &target=zh-CN
