@@ -1,5 +1,6 @@
 {
   "name": "logogram",
+  "homepage": "https://ruanha.github.io/logogram/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
