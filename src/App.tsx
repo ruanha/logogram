@@ -5,6 +5,7 @@ import Output from "./components/Output";
 
 function App() {
   const [value, setValue] = useState("");
+  const [outputValue, setOutputValue] = useState("约翰");
 
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
       </header>
       <main>
         <Input value={value} onChange={setValue} />
-        <Output value="value" />
+        <Output value={outputValue} />
       </main>
     </div>
   );
